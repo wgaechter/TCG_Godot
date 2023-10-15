@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://wgx6x1fbfwx"]
+
+[ext_resource type="Script" path="res://card.cs" id="1_shvb6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30ftc"]
+size = Vector2(240, 330)
+
+[node name="Card" type="RigidBody2D"]
+position = Vector2(620, 327)
+freeze = true
+script = ExtResource("1_shvb6")
+metadata/_edit_group_ = true
+
+[node name="Card_Img" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_30ftc")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

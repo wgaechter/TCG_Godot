@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://pq83wd3uc8vb"]
+
+[ext_resource type="Script" path="res://main.cs" id="1_u0tqh"]
+[ext_resource type="Texture2D" uid="uid://cn0lv68smnmys" path="res://assets/background.webp" id="2_cnpmp"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_u0tqh")
+
+[node name="Card_Marker" type="Marker2D" parent="."]
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="Background_Layer" type="ParallaxLayer" parent="Background"]
+
+[node name="Background_Img" type="Sprite2D" parent="Background/Background_Layer"]
+scale = Vector2(0.998387, 0.994885)
+texture = ExtResource("2_cnpmp")
+centered = false
